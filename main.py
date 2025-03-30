@@ -10,12 +10,12 @@ class Reconstruction:
         if args.continue_reconstruction is not None:
             self.output_dir = args.continue_reconstruction + '/'
         else:
-            self.output_dir = 'output/output' + datetime.now().strftime("%d-%m-%Y_%H-%M-%S" + '/')
+            self.output_dir = 'data/output' + datetime.now().strftime("%d-%m-%Y_%H-%M-%S" + '/')
             temp_filename = self.name
             temp_filename_counter = 1
             while True:
                 try:
-                    self.output_dir = 'output/' + temp_filename + '/'
+                    self.output_dir = 'data/' + temp_filename + '/'
                     os.mkdir(self.output_dir)
                     break
 
